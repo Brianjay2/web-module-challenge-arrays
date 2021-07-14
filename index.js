@@ -45,9 +45,10 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-  /*your code here*/
-}    
+function copy(array){
+  return[...array];
+} 
+console.log(`Task 1:`,copy(originalFlavors)); 
 
 
 
@@ -64,9 +65,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(array){
+ if (array.length===31){
+   return true;
+ }else{
+   return false;
+ }
 }
+console.log(`Task 2`,is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -80,11 +86,12 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
-function addFlavor(/*your code here*/){
- /*your code here*/
+   /*add 2 parameters*/
+function addFlavor(array,string){
+ array.unshift(string);
+ return array;
 }
-
+console.log(`Task 3:`,addFlavor(originalFlavors, `Rainbow Sherbert`));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -96,9 +103,11 @@ Use the removeLastFlavor function below to do the following:
 
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-
+//1 parameter
 function removeLastFlavor(/*your code here*/){
  /*your code here*/
+ //remove last item using   .pop()..no argument
+ //return the array
 }
 
 
@@ -114,8 +123,12 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
+
+// 2 parameters 1array 2nnum index
 function getFlavorByIndex(/*your code here*/){
   /*your code here*/
+
+  //return the index
 }
 
 
